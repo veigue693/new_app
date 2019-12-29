@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<h1>ラーメン屋編集</h1>
+<%= form_for(@shop) do |f| %>
+  <div><%= f.label :title %></div>
+  <div><%= f.text_field :title %></div>
+  <div><%= f.file_field :image %></div>
+  <div><%= f.submit %></div>
+<% end %>
+<%= link_to '戻る', shops_path %>

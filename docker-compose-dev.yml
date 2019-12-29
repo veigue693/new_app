@@ -1,0 +1,10 @@
+version: "3"
+
+volumes:
+  rails-sync:
+    external: true
+
+services:
+  web:
+    volumes:
+      - rails-sync:/new_app:nocopy

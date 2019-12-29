@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<h1>ラーメン記録</h1>
+<table>
+  <thead>
+    <tr>
+      <th>食べたラーメン一覧</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= @shop.title %></td>
+        <td><%= image_tag @shop.image.url.to_s %></td>
+      </tr>
+  </tbody>
+</table>
+<%= link_to '編集', edit_shop_path(@shop) %>
+<%= link_to '戻る', shops_path %>
