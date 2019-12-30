@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<h1>ラーメン記録</h1>
-<table>
-  <thead>
-    <tr>
-      <th>食べたラーメン一覧</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @shops.each do |shop| %>
-      <tr>
-        <td><%= shop.title %></td>
-        <td><%= image_tag shop.image.url.to_s %></td>
-        <td><%= link_to '編集', edit_shop_path(shop) %></td>
-        <td><%= link_to '表示', shop_path(shop), method: :get %></td>
-        <td><%= link_to '削除', shop_path(shop), method: :delete %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1>ラーメン日記</h1>
+<div>🍥食べたラーメン一覧🍥</div>
+
+<% @shops.each do |shop| %>
+  <div class='block_index'>
+    <div><%= link_to shop.title, shop_path(shop), method: :get %></div>
+    <div class='centering'><%= image_tag shop.image.url.to_s ,class: "ramen"%></div>
+    <div class='Right_align'><%= link_to '編集', edit_shop_path(shop) %>
+    <%= link_to '削除', shop_path(shop), method: :delete %></div>
+  </div> 
+  <div>
+  </div>
+<% end %>
+
 <%= link_to '追加', new_shop_path %>
+
+</div>

@@ -1,3 +1,46 @@
 // Place all the styles related to the shops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.centering { 
+  text-align: center;
+}
+
+img.ramen {
+  width: 450px;
+  height: 300px;
+}
+
+.Right_align{
+  text-align: right;
+}
+
+.block_index{
+  width: 600px;
+  height: 350px;
+  padding: 0.5em 1em;
+  margin: 2em 5em;
+  color: #232323;
+  background: #ffd676;
+  border-left: solid 10px #ffa42e;
+  border-radius: 5px;
+}
+
+.block_show{
+  width: 650px;
+  height: 100%;
+  padding: 0.5em 1em;
+  margin: 2em 5em;
+  color: #232323;
+  background: #ffd676;
+  border-left: solid 10px #ffa42e;
+  border-radius: 5px;
+}
+
+.fontsize_8px{
+  font-size: 8px;
+}

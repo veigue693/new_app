@@ -13,9 +13,10 @@
 ActiveRecord::Schema.define(version: 2019_12_25_133820) do
 
   create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
+    t.date "visit_date"
     t.string "image"
-    t.string "grade"
+    t.integer "grade"
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

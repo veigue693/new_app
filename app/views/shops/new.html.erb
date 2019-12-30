@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<h1>ラーメン屋登録</h1>
+<h1>ラーメン日記</h1>
+<h1>🍥ラーメンを追加する🍥</h1>
 <%= form_for(@shop) do |f| %>
-  <div><%= f.label :title %></div>
-  <div><%= f.text_field :title %></div> 
+  <div><%= f.label :ラーメン屋の名前 %></div>
+  <div><%= f.text_field :title %></div>
+  <div><%= f.label :食べた日 %></div>
+  <%=raw sprintf(
+              f.date_select(
+                  :visit_date,
+                  use_month_numbers: true,
+                  start_year:        1930,
+                  end_year:          Time.now.year,
+                  default:           Date.today,
+                  date_separator:    '%s'), # 年月日区切りをそれぞれ指定
+              '年 ', '月 ') + '日'%>
+
+  <div><%= f.label :ラーメンの画像 %></div>
   <div><%= f.file_field :image %></div>
+  <div><%= f.label :評価 %></div>
+  <div class= 'fontsize_8px'><%= f.label :（１：好みじゃなかった　２：少し好みじゃなかった　３：普通に美味しかった　４：好みの味　５：非常に好みの味） %></div>
+  <div><%= f.select :grade, [1,2,3,4,5] %></div>
+  <div><%= f.label :コメント %></div>
+  <div><%= f.text_field :comment %></div>
   <div><%= f.submit %></div>
 <% end %>
 <%= link_to '戻る', shops_path %>
